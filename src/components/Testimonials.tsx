@@ -48,7 +48,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="break-inside-avoid bg-surface border border-white/10 rounded-sm p-6"
+              className="break-inside-avoid bg-surface border border-black/10 rounded-sm p-6"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.stars }).map((_, i) => (

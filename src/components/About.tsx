@@ -51,7 +51,7 @@ export default function About() {
           {values.map((v) => (
             <div
               key={v.title}
-              className="bg-surface border border-white/10 p-8 rounded-sm"
+              className="bg-surface border border-black/10 p-8 rounded-sm"
             >
               <v.icon size={32} className="text-primary mb-4" />
               <h3 className="text-lg font-bold mb-2">{v.title}</h3>

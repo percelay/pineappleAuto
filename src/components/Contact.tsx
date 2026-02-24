@@ -33,7 +33,7 @@ export default function Contact() {
                 href="tel:+14054410337"
                 className="flex items-center gap-4 group"
               >
-                <span className="w-12 h-12 bg-surface border border-white/10 rounded-sm flex items-center justify-center transition-colors duration-200 group-hover:border-primary/50">
+                <span className="w-12 h-12 bg-surface border border-black/10 rounded-sm flex items-center justify-center transition-colors duration-200 group-hover:border-primary/50">
                   <Phone
                     size={20}
                     className="text-text-muted transition-colors duration-200 group-hover:text-primary"
@@ -53,7 +53,7 @@ export default function Contact() {
                 href="mailto:bearbuildingsolutions@outlook.com"
                 className="flex items-center gap-4 group"
               >
-                <span className="w-12 h-12 bg-surface border border-white/10 rounded-sm flex items-center justify-center transition-colors duration-200 group-hover:border-primary/50">
+                <span className="w-12 h-12 bg-surface border border-black/10 rounded-sm flex items-center justify-center transition-colors duration-200 group-hover:border-primary/50">
                   <Mail
                     size={20}
                     className="text-text-muted transition-colors duration-200 group-hover:text-primary"
@@ -70,7 +70,7 @@ export default function Contact() {
               </a>
 
               <div className="flex items-center gap-4">
-                <span className="w-12 h-12 bg-surface border border-white/10 rounded-sm flex items-center justify-center">
+                <span className="w-12 h-12 bg-surface border border-black/10 rounded-sm flex items-center justify-center">
                   <MapPin size={20} className="text-text-muted" />
                 </span>
                 <div>
@@ -86,7 +86,7 @@ export default function Contact() {
           </div>
 
           {/* Right — Form */}
-          <div className="bg-surface border border-white/10 rounded-sm p-8">
+          <div className="bg-surface border border-black/10 rounded-sm p-8">
             <h3 className="text-2xl font-black mb-6">Request a Quote</h3>
             <form className="space-y-5">
               <div>
@@ -101,7 +101,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   required
-                  className="w-full bg-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors"
+                  className="w-full bg-bg border border-black/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors"
                   placeholder="John Doe"
                 />
               </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                     name="phone"
                     type="tel"
                     required
-                    className="w-full bg-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-bg border border-black/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors"
                     placeholder="(405) 555-0123"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function Contact() {
                     name="email"
                     type="email"
                     required
-                    className="w-full bg-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-bg border border-black/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -152,7 +152,7 @@ export default function Contact() {
                   id="service"
                   name="service"
                   required
-                  className="w-full bg-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-text-main focus:outline-none focus:border-primary transition-colors appearance-none"
+                  className="w-full bg-bg border border-black/10 rounded-sm px-4 py-3 text-sm text-text-main focus:outline-none focus:border-primary transition-colors appearance-none"
                 >
                   <option value="">Select a service</option>
                   {serviceOptions.map((opt) => (
@@ -174,14 +174,14 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full bg-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full bg-bg border border-black/10 rounded-sm px-4 py-3 text-sm text-text-main placeholder:text-text-muted/50 focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-primary text-bg font-bold py-4 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-white cursor-pointer"
+                className="w-full bg-primary text-white font-bold py-4 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-black hover:text-white cursor-pointer"
               >
                 Send Request
               </button>

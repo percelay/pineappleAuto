@@ -65,7 +65,7 @@ function ServiceCard({ service }: { service: Service }) {
     <>
       <button
         onClick={() => setExpanded(true)}
-        className="group bg-surface border border-white/10 rounded-sm p-8 text-left transition-all duration-300 hover:border-primary/50 hover:bg-surface/80 cursor-pointer"
+        className="group bg-surface border border-black/10 rounded-sm p-8 text-left transition-all duration-300 hover:border-primary/50 hover:bg-surface/80 cursor-pointer"
       >
         <Icon
           size={40}
@@ -89,7 +89,7 @@ function ServiceCard({ service }: { service: Service }) {
           onClick={() => setExpanded(false)}
         >
           <div
-            className="bg-surface border border-white/10 rounded-sm max-w-lg w-full p-8 relative"
+            className="bg-surface border border-black/10 rounded-sm max-w-lg w-full p-8 relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button

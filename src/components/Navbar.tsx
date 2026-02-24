@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-md border-b border-black/10">
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
         <a href="#" className="text-lg font-black tracking-tight">
           BEAR BUILDING
@@ -46,7 +46,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-bg/95 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-bg/95 backdrop-blur-md border-b border-black/10">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {links.map((link) => (
               <li key={link.href}>
