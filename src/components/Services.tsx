@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Shield, Wrench, Sun, Car, Square, X, ChevronRight, ImageIcon } from "lucide-react";
+import { Shield, Wrench, Sun, Car, Square, X, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 
 interface Service {
@@ -167,12 +168,13 @@ export default function Services() {
 
         {/* Windshield Replacement spotlight */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24 md:mb-32">
-          {/* Image placeholder */}
-          <div className="bg-surface border-2 border-dashed border-black/15 rounded-sm flex flex-col items-center justify-center p-10 min-h-[320px] order-2 lg:order-1">
-            <ImageIcon size={48} className="text-text-muted/30 mb-4" />
-            <p className="text-text-muted text-sm text-center max-w-xs">
-              Photo: Technician installing a new windshield on a customer&apos;s car — close-up on hands and glass
-            </p>
+          <div className="relative rounded-sm overflow-hidden min-h-[320px] order-2 lg:order-1">
+            <Image
+              src="/images/technician-fixing-windshield-close-up.avif"
+              alt="Technician installing a new windshield"
+              fill
+              className="object-cover"
+            />
           </div>
           <div className="order-1 lg:order-2">
             <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">
@@ -226,12 +228,13 @@ export default function Services() {
               Repair My Windshield <ChevronRight size={16} />
             </a>
           </div>
-          {/* Image placeholder */}
-          <div className="bg-surface border-2 border-dashed border-black/15 rounded-sm flex flex-col items-center justify-center p-10 min-h-[320px]">
-            <ImageIcon size={48} className="text-text-muted/30 mb-4" />
-            <p className="text-text-muted text-sm text-center max-w-xs">
-              Photo: Before/after close-up of a windshield chip repair — showing the resin injection process
-            </p>
+          <div className="relative rounded-sm overflow-hidden min-h-[320px]">
+            <Image
+              src="/images/beforeafter1600x640.jpg"
+              alt="Windshield chip repair before and after"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
