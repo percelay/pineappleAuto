@@ -18,17 +18,14 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1D6FA4] border-b border-white/20">
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-20">
-        <a href="#" className="flex items-center gap-3">
+        <a href="#">
           <Image
             src="/images/pineapplelogo.png"
             alt="Pineapple Auto Glass"
-            width={56}
-            height={56}
-            className="object-contain"
+            width={120}
+            height={64}
+            className="object-contain h-14 w-auto"
           />
-          <span className="text-white text-base font-black tracking-tight">
-            PINEAPPLE AUTO GLASS
-          </span>
         </a>
 
         {/* Desktop */}
