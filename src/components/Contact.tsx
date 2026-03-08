@@ -32,7 +32,7 @@ export default function Contact() {
 
             <div className="space-y-6 mb-12">
               <a
-                href="tel:+17275550000"
+                href="tel:+17279022572"
                 className="flex items-center gap-4 group"
               >
                 <span className="w-12 h-12 bg-bg border border-black/10 rounded-sm flex items-center justify-center transition-colors duration-200 group-hover:border-primary/50">
@@ -41,7 +41,7 @@ export default function Contact() {
                 <div>
                   <p className="text-xs text-text-muted uppercase tracking-wider">Phone</p>
                   <p className="font-bold transition-colors duration-200 group-hover:text-primary">
-                    (727) XXX-XXXX
+                    (727) 902-2572
                   </p>
                 </div>
               </a>

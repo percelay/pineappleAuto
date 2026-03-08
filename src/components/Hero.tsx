@@ -28,7 +28,7 @@ export default function Hero() {
               <ArrowRight size={18} />
             </a>
             <a
-              href="tel:+17275550000"
+              href="tel:+17279022572"
               className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-8 py-4 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-white/20"
             >
               <Phone size={16} />
