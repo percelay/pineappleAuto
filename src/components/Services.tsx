@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Home, Building2, Factory, X, ChevronRight } from "lucide-react";
+import { Shield, Wrench, Sun, Car, Square, X, ChevronRight, ImageIcon } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Service {
@@ -14,45 +14,73 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: Home,
-    title: "Residential",
-    tagline: "Custom home building, renovations, and personalized design.",
+    icon: Shield,
+    title: "Windshield Replacement",
+    tagline: "Full replacement using OEM-grade glass — fast and done right.",
     description:
-      "From ground-up custom homes to full-scale renovations, we bring your vision to life with meticulous craftsmanship. Our team handles every detail — design, permitting, construction, and finishing — so you can enjoy a stress-free building experience.",
+      "A cracked or damaged windshield isn't just an eyesore — it's a real safety hazard. We specialize in professional windshield replacement using OEM-grade glass and advanced installation techniques. Whether you've got a minor crack that spread or a completely shattered windshield, our certified technicians handle it with care and get you back on the road the same day.",
     features: [
-      "Custom home construction",
-      "Full-scale renovations",
-      "Kitchen & bathroom remodels",
-      "Additions & expansions",
-      "Design-build integration",
+      "OEM-grade and OEE glass options",
+      "Same-day appointments available",
+      "Mobile service — we come to you",
+      "ADAS recalibration when required",
+      "Insurance claims handled for you",
     ],
   },
   {
-    icon: Building2,
-    title: "Commercial",
-    tagline: "Office spaces, retail build-outs, and scalable infrastructure.",
+    icon: Wrench,
+    title: "Windshield Repair",
+    tagline: "Stop a chip before it turns into a full replacement.",
     description:
-      "We deliver commercial spaces that drive business results. Whether you need a modern office, a retail storefront, or a multi-use complex, our design-to-build approach ensures your project stays on budget and on schedule.",
+      "A small chip or crack might not seem like a big deal, but leave it alone and it spreads fast. We use advanced resin injection technology to repair chips and cracks in place — no removal needed, no long wait, and most repairs take under 30 minutes. Save money and preserve your original glass.",
     features: [
-      "Office build-outs",
-      "Retail construction",
-      "Tenant improvements",
-      "Multi-use developments",
-      "ADA compliance & code work",
+      "Advanced resin injection technology",
+      "Most repairs done in under 30 minutes",
+      "Preserves your factory-installed glass",
+      "Results often invisible after repair",
+      "Insurance deductible waived in most cases",
     ],
   },
   {
-    icon: Factory,
-    title: "Industrial",
-    tagline: "Warehousing, manufacturing facilities, and heavy-duty logistics.",
+    icon: Sun,
+    title: "Sunroof Glass Replacement",
+    tagline: "Cracked or shattered sunroof glass replaced correctly.",
     description:
-      "Purpose-built industrial spaces designed for efficiency and durability. We specialize in large-scale projects that meet the demanding requirements of manufacturing, warehousing, and distribution operations.",
+      "Sunroof damage can happen from hail, debris, or just bad luck. We replace sunroof glass on most makes and models, restoring the seal and structural integrity so you don't deal with leaks or wind noise.",
     features: [
-      "Warehouse construction",
-      "Manufacturing facilities",
-      "Distribution centers",
-      "Cold storage facilities",
-      "Heavy equipment foundations",
+      "Fits most makes and models",
+      "Proper sealing to prevent leaks",
+      "OEM-spec glass replacements",
+      "Mobile service available",
+      "Quick turnaround",
+    ],
+  },
+  {
+    icon: Car,
+    title: "Side Window Replacement",
+    tagline: "Door glass and quarter windows replaced the same day.",
+    description:
+      "A broken side window leaves your vehicle exposed to weather and theft. We carry stock for most common vehicles and can often replace door glass and quarter windows on the spot so you're not left vulnerable overnight.",
+    features: [
+      "Same-day stock on popular vehicles",
+      "Driver and passenger side",
+      "Rear quarter windows",
+      "Proper regulator inspection included",
+      "Mobile service available",
+    ],
+  },
+  {
+    icon: Square,
+    title: "Rear Glass Replacement",
+    tagline: "Rear windshield replacement with defroster restored.",
+    description:
+      "Rear glass replacement is more involved than it looks — defroster grids, antennas, and tight seals all need to be handled correctly. Our technicians make sure your rear glass is installed properly with all integrated components working as they should.",
+    features: [
+      "Defroster grid reinstalled or repaired",
+      "Antenna integration handled",
+      "Full seal and weatherproofing",
+      "OEM-grade glass",
+      "Lifetime warranty on workmanship",
     ],
   },
 ];
@@ -65,16 +93,16 @@ function ServiceCard({ service }: { service: Service }) {
     <>
       <button
         onClick={() => setExpanded(true)}
-        className="group bg-surface border border-black/10 rounded-sm p-8 text-left transition-all duration-300 hover:border-primary/50 hover:bg-surface/80 cursor-pointer"
+        className="group bg-surface border border-black/10 rounded-sm p-7 text-left transition-all duration-300 hover:border-primary/50 hover:shadow-md cursor-pointer"
       >
         <Icon
-          size={40}
-          className="text-text-muted transition-colors duration-300 group-hover:text-primary mb-6"
+          size={36}
+          className="text-text-muted transition-colors duration-300 group-hover:text-primary mb-5"
         />
-        <h3 className="text-2xl font-black mb-3 transition-colors duration-300 group-hover:text-primary">
+        <h3 className="text-xl font-black mb-2 transition-colors duration-300 group-hover:text-primary">
           {service.title}
         </h3>
-        <p className="text-text-muted text-sm leading-relaxed mb-6">
+        <p className="text-text-muted text-sm leading-relaxed mb-5">
           {service.tagline}
         </p>
         <span className="inline-flex items-center gap-1 text-sm font-bold text-primary">
@@ -89,7 +117,7 @@ function ServiceCard({ service }: { service: Service }) {
           onClick={() => setExpanded(false)}
         >
           <div
-            className="bg-surface border border-black/10 rounded-sm max-w-lg w-full p-8 relative"
+            className="bg-bg border border-black/10 rounded-sm max-w-lg w-full p-8 relative max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -100,13 +128,13 @@ function ServiceCard({ service }: { service: Service }) {
               <X size={20} />
             </button>
 
-            <Icon size={40} className="text-primary mb-4" />
-            <h3 className="text-3xl font-black mb-4">{service.title}</h3>
-            <p className="text-text-muted leading-relaxed mb-6">
+            <Icon size={36} className="text-primary mb-4" />
+            <h3 className="text-2xl font-black mb-3">{service.title}</h3>
+            <p className="text-text-muted leading-relaxed mb-6 text-sm">
               {service.description}
             </p>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-8">
               {service.features.map((f) => (
                 <li
                   key={f}
@@ -117,6 +145,14 @@ function ServiceCard({ service }: { service: Service }) {
                 </li>
               ))}
             </ul>
+
+            <a
+              href="#contact"
+              onClick={() => setExpanded(false)}
+              className="inline-flex items-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-primary-dark"
+            >
+              Get a Quote <ChevronRight size={16} />
+            </a>
           </div>
         </div>
       )}
@@ -128,14 +164,86 @@ export default function Services() {
   return (
     <section id="services" className="py-24 md:py-32 bg-bg">
       <div className="max-w-7xl mx-auto px-6">
+
+        {/* Windshield Replacement spotlight */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-24 md:mb-32">
+          {/* Image placeholder */}
+          <div className="bg-surface border-2 border-dashed border-black/15 rounded-sm flex flex-col items-center justify-center p-10 min-h-[320px] order-2 lg:order-1">
+            <ImageIcon size={48} className="text-text-muted/30 mb-4" />
+            <p className="text-text-muted text-sm text-center max-w-xs">
+              Photo: Technician installing a new windshield on a customer&apos;s car — close-up on hands and glass
+            </p>
+          </div>
+          <div className="order-1 lg:order-2">
+            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">
+              Most Common Service
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight mb-5">
+              Windshield Replacement
+            </h2>
+            <p className="text-text-muted text-lg leading-relaxed mb-5">
+              A cracked windshield isn&apos;t just an eyesore — it&apos;s a structural
+              issue. Your windshield accounts for up to 30% of your car&apos;s cabin
+              rigidity and is part of your airbag deployment system.
+            </p>
+            <p className="text-text-muted text-lg leading-relaxed mb-8">
+              We use OEM-grade glass and follow manufacturer installation specs
+              so your vehicle is as safe after the job as it was before — often
+              finished the same day you call.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-primary text-white font-bold px-7 py-3.5 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-primary-dark"
+            >
+              Book a Replacement <ChevronRight size={16} />
+            </a>
+          </div>
+        </div>
+
+        {/* Windshield Repair spotlight */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-24 md:mb-32">
+          <div>
+            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">
+              Fix It Before It Spreads
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight mb-5">
+              Windshield Repair
+            </h2>
+            <p className="text-text-muted text-lg leading-relaxed mb-5">
+              A chip smaller than a quarter can almost always be repaired —
+              no replacement needed. Most repairs take under 30 minutes and cost a
+              fraction of a full replacement.
+            </p>
+            <p className="text-text-muted text-lg leading-relaxed mb-8">
+              We inject professional-grade resin into the damaged area, restoring
+              clarity and strength before the crack has a chance to spread across
+              the glass.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-primary text-white font-bold px-7 py-3.5 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-primary-dark"
+            >
+              Repair My Windshield <ChevronRight size={16} />
+            </a>
+          </div>
+          {/* Image placeholder */}
+          <div className="bg-surface border-2 border-dashed border-black/15 rounded-sm flex flex-col items-center justify-center p-10 min-h-[320px]">
+            <ImageIcon size={48} className="text-text-muted/30 mb-4" />
+            <p className="text-text-muted text-sm text-center max-w-xs">
+              Photo: Before/after close-up of a windshield chip repair — showing the resin injection process
+            </p>
+          </div>
+        </div>
+
+        {/* All Services */}
         <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">
-          What We Do
+          All Services
         </p>
-        <h2 className="text-4xl md:text-5xl font-black leading-tight mb-16 max-w-2xl">
-          End-to-end construction services.
+        <h2 className="text-4xl md:text-5xl font-black leading-tight mb-14 max-w-2xl">
+          Everything auto glass, handled.
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}

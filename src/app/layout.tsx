@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bear Building Solutions | Hassle-Free Building",
+  title: "Pineapple Auto Glass | Windshield Replacement & Repair",
   description:
-    "Over 50 years of building experience. Custom residential, commercial, and industrial construction in Oklahoma City.",
+    "Professional windshield replacement and auto glass repair in Tampa Bay. Same-day mobile service, insurance assistance, and certified technicians.",
 };
 
 export default function RootLayout({
