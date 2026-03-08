@@ -16,17 +16,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#111827]/95 backdrop-blur-md border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1D6FA4] border-b border-white/20">
+      <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-20">
         <a href="#" className="flex items-center gap-3">
           <Image
             src="/images/pineapplelogo.png"
             alt="Pineapple Auto Glass"
-            width={36}
-            height={36}
+            width={56}
+            height={56}
             className="object-contain"
           />
-          <span className="text-white text-base font-black tracking-tight hidden sm:block">
+          <span className="text-white text-base font-black tracking-tight">
             PINEAPPLE AUTO GLASS
           </span>
         </a>
@@ -64,7 +64,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#111827]/98 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-[#1D6FA4] border-b border-white/20">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {links.map((link) => (
               <li key={link.href}>
