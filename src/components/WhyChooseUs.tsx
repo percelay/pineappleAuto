@@ -30,9 +30,9 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-24 md:py-32 bg-black">
+    <section id="why-us" className="py-24 md:py-32 bg-[#0ABAB5]">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">
+        <p className="text-white/70 text-sm font-bold uppercase tracking-widest mb-4">
           Why Pineapple
         </p>
         <h2 className="text-4xl md:text-5xl font-black leading-tight text-white mb-16 max-w-2xl">
@@ -43,11 +43,11 @@ export default function WhyChooseUs() {
           {reasons.slice(0, 3).map((r) => (
             <div
               key={r.title}
-              className="bg-white/5 border border-white/10 rounded-sm p-8 hover:border-primary/40 transition-colors duration-300"
+              className="bg-white rounded-sm p-8 hover:shadow-lg transition-shadow duration-300"
             >
               <r.icon size={32} className="text-primary mb-5" />
-              <h3 className="text-lg font-black text-white mb-3">{r.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{r.text}</p>
+              <h3 className="text-lg font-black text-text-main mb-3">{r.title}</h3>
+              <p className="text-text-muted text-sm leading-relaxed">{r.text}</p>
             </div>
           ))}
         </div>
@@ -56,11 +56,11 @@ export default function WhyChooseUs() {
           {reasons.slice(3).map((r) => (
             <div
               key={r.title}
-              className="bg-white/5 border border-white/10 rounded-sm p-8 hover:border-primary/40 transition-colors duration-300"
+              className="bg-white rounded-sm p-8 hover:shadow-lg transition-shadow duration-300"
             >
               <r.icon size={32} className="text-primary mb-5" />
-              <h3 className="text-lg font-black text-white mb-3">{r.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{r.text}</p>
+              <h3 className="text-lg font-black text-text-main mb-3">{r.title}</h3>
+              <p className="text-text-muted text-sm leading-relaxed">{r.text}</p>
             </div>
           ))}
         </div>
