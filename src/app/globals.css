@@ -2,9 +2,9 @@
 
 @theme {
   --color-bg: #FFFFFF;
-  --color-surface: #F0F8FB;
-  --color-primary: #1B8EA8;
-  --color-primary-dark: #146E85;
+  --color-surface: #F4F4F4;
+  --color-primary: #0ABAB5;
+  --color-primary-dark: #089A96;
   --color-text-main: #111827;
   --color-text-muted: #64748B;
 }

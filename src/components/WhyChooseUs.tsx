@@ -30,7 +30,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-24 md:py-32 bg-[#07202B]">
+    <section id="why-us" className="py-24 md:py-32 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">
           Why Pineapple
