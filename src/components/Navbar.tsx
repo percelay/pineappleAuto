@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0ABAB5] border-b border-black/10">
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-20">
         <a href="#">
           <Image
@@ -34,7 +34,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-white/60 transition-colors duration-200 hover:text-primary"
+                className="text-sm text-white font-medium transition-colors duration-200 hover:text-black"
               >
                 {link.label}
               </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-primary text-white font-bold px-5 py-2 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-primary-dark"
+          className="hidden md:inline-flex items-center gap-2 bg-black text-white font-bold px-5 py-2 rounded-sm text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-black/80"
         >
           Get a Quote
         </a>
@@ -61,14 +61,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-black border-b border-white/20">
+        <div className="md:hidden bg-[#0ABAB5] border-b border-black/10">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-white/60 transition-colors duration-200 hover:text-primary"
+                  className="text-sm text-white font-medium transition-colors duration-200 hover:text-black"
                 >
                   {link.label}
                 </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center bg-primary text-white font-bold px-5 py-2 rounded-sm text-sm uppercase tracking-widest"
+                className="inline-flex items-center bg-black text-white font-bold px-5 py-2 rounded-sm text-sm uppercase tracking-widest"
               >
                 Get a Quote
               </a>
