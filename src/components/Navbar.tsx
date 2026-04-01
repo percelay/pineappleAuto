@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1D6FA4] border-b border-white/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#147A8F] border-b border-white/20">
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-20">
         <a href="#">
           <Image
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#1D6FA4] border-b border-white/20">
+        <div className="md:hidden bg-[#147A8F] border-b border-white/20">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {links.map((link) => (
               <li key={link.href}>
