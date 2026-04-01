@@ -3,7 +3,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-r from-white to-gray-200">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-r from-white to-gray-400">
 
       <div className="relative max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-0 items-center py-20">
 
