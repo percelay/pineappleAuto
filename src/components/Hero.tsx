@@ -3,9 +3,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-      {/* Tiffany blue right-half panel */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-[#0ABAB5] hidden lg:block" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-r from-white to-gray-200">
 
       <div className="relative max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-0 items-center py-20">
 
@@ -57,17 +55,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: Truck on Tiffany blue */}
-        <div className="relative flex items-center justify-center lg:justify-end lg:pl-8 mt-12 lg:mt-0">
-          {/* Mobile: tiffany bg pill */}
-          <div className="absolute inset-0 bg-[#0ABAB5] rounded-2xl lg:hidden" />
-          <div className="relative z-10 w-full max-w-xl py-8 lg:py-0">
+        {/* Right: Truck */}
+        <div className="flex items-center justify-center lg:justify-end lg:pl-8 mt-12 lg:mt-0">
+          <div className="w-full max-w-xl">
             <Image
               src="/images/pineappleauto.png"
               alt="Pineapple Auto Glass service truck"
               width={640}
               height={480}
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-xl"
               priority
             />
           </div>
